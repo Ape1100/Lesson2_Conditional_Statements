@@ -1,0 +1,48 @@
+#2 The Greatest Showdown
+#Task_1 
+#Identify the Greatest
+
+greeting = "Please enter three numbers?"
+print(greeting)
+
+def compare_numbers(num1, num2, num3):
+    if num1 == num2 == num3:
+        print("All numbers are equal.")
+        return
+
+    if num1 == num2:
+        print(f"Number One and Number Two are Equal.")
+        largest = max(num1, num3)
+        smallest = min(num1, num3)
+        print(f"The smallest number is {smallest}. The largest number is {largest}.")
+        return
+
+    if num1 == num3:
+        print(f"The First and Third numbers are equal.")
+        largest = max(num1, num2)
+        smallest = min(num1, num2)
+        print(f"The smallest number is {smallest}. The largest number is {largest}.")
+        return
+
+    if num2 == num3:
+        print(f"The second and third numbers ({num2}) are equal.")
+        largest = max(num1, num2)
+        smallest = min(num1, num2)
+        print(f"The smallest number is {smallest}. The largest number is {largest}.")
+        return
+
+    largest = max(num1, num2, num3)
+    smallest = min(num1, num2, num3)
+
+    print(f"The smallest number is {smallest}. The largest number is {largest}.")
+
+def main():
+    num1 = float(input("Enter the first number: "))
+    num2 = float(input("Enter the second number: "))
+    num3 = float(input("Enter the third number: "))
+
+    print("\nComparing numbers now...")
+    compare_numbers(num1, num2, num3)
+
+if __name__ == "__main__":
+    main()
